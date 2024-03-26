@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<section id="uese_name_page">
+    <p class="court">"Each lesson learned is a treasure in the chest of intellect."</p>
+    <img src="https://generouswork.com/wp-content/uploads/2018/05/online-quiz-website-courses.jpg" alt="" id="quiz_boy_img">
+    <label class="userName_input_label"> Enter Your Name </label>
+    <input id="user_name_input" type="text" placeholder="Below 15 char">
+    <input type="button" value="Start" id="enter_quiz_page">
+</section>
+
+
+
+<section id="Question_page">
+        <div class="level_category">
+            <h1 id="category_level" class="level">Geography</h1>
+            <div class="Question_count_box">
+                <span id="Current_Question_Number">1</span>/<span>10</span>
+            </div>
+        </div>
+        
+<div class="Question_count_window">
+    <div class="question_count_move "></div>
+</div>
+
+<div class="question_bottom_page">
+        <b><div id="Question">question</div></b>
+        <div id="Question_img"></div>
+        <div id="option1" class="option">option1...</div>
+        <div id="option2" class="option">option2...</div>
+        <div id="option3" class="option">option3...</div>
+        <div id="option4" class="option">option4...</div>
+
+        <div class="question_page_button_and_time">
+                <input type="button" value="Next" id="Next_Qusestion_Button">
+        </div>
+</div>
+
+<img id="back_Quiz_page" src="https://cdn-icons-png.flaticon.com/128/151/151846.png" alt="arrow">
+
+
+</section>
+
+
+
+
+<section id="category_page">
+
+<div class="user_detail_category_page">
+     <div>👋 Hi <span id="player_name">Player</span><br> Welcome! It's a pleasure to have you here.</div>
+     <img src="soccer-player.png" alt="player_img" width="80px">
+</div>
+<h1>Choose Category</h1>
+  <div class="category_box">
+    <div id="category_Geography" class="category">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmvxk95u8vpB-rBhQcKr_04j-rxiPxxw4Vjg&usqp=CAU" alt="Georphy_img" width="90%" height="80%">
+         <h3 class="category_name">Geography</h3>
+    </div>
+    <div id="category_History" class="category">
+        <img src="https://www.q-files.com/media/article/1617/4f9a5601-fabe-4795-a7a2-32d08d96472a.jpg" alt="Georphy_img" width="90%" height="80%">
+         <h3>History</h3>
+    </div>
+  </div>
+<div class="category_box">
+    <div id="category_Political" class="category">
+        <img src="data:image/jpeg;base64,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" alt="Georphy_img" width="90%" height="80%">
+         <h3>Political</h3>
+    </div>
+    <div id="category_Maths" class="category">
+        <img src="https://img.freepik.com/vektoren-premium/cartoon-math-elemente-hintergrund_23-2148158750.jpg?w=2000" alt="Georphy_img" width="90%" height="80%">
+         <h3>Maths</h3>
+    </div>
+</div>
+   <input type="button" value="Start" id="start_quiz">
+
+   <img src="https://cdn-icons-png.flaticon.com/128/7960/7960328.png" alt="High_score_img" id="High_score_img">
+</section>
+
+
+
+
+
+<section id="result_page">
+
+    <div id="result_img"></div>
+    <div class="result_box">
+        <h2 id="reuslt_stats">Victory !</h2>
+        <span>Quiz Game</span>
+
+        <divn class="score_box">
+            <div class="score_stats">
+                <div id="total_score">10</div>
+                <div>Total</div>
+            </div>
+            <div class="score_stats correct_ans_count">
+                <div id="correct_ans">8</div>
+                <div>Correct</div>
+            </div>
+            <div  class="score_stats">
+                <div id="wrong_ans">12</div>
+                <div>Wrong</div>
+            </div>
+        </div>
+    </div>
+    <div class="review_result_button">
+        <input id="play_again" type="button" value="Play Again">
+        <img src="https://cdn-icons-png.flaticon.com/128/3207/3207604.png" alt="review_icon" id="review_img">
+    </div>
+    
+    <img id="back_result_page" src="https://cdn-icons-png.flaticon.com/128/151/151846.png" alt="arrow">
+</section>
+
+
+
+
+<section id="High_score_page">
+    <h2 class="H_S_name">Hight Score</h2>
+    <h3 class="H_S_category_name">Geography</h3>
+    <div class="score_bord">
+       <span class="h_p_name">player</span>
+       <span id="Geography_high_score">0</span>
+    </div>
+    <h3 class="H_S_category_name">History</h3>
+    <div class="score_bord">
+       <span class="h_p_name">player</span>
+       <span id="History_high_score">0</span>
+    </div>
+    <h3 class="H_S_category_name">Political</h3>
+    <div class="score_bord">
+      <span class="h_p_name">player</span>
+      <span id="Political_high_score">0</span>
+   </div>
+   <h3 class="H_S_category_name">Maths</h3>
+   <div class="score_bord">
+      <span class="h_p_name">player</span>
+      <span id="Maths_high_score">0</span>
+   </div>
+  
+   <p class="proverb">
+      "Success is a journey, not a destination." <br>
+       "If at first, you don't succeed, try, try again."
+   </p>
+   <img id="back_stats_page" src="https://cdn-icons-png.flaticon.com/128/151/151846.png" alt="arrow">
+  </section>
+  
+
+
+  <section id="review_page">
+    <h1>Review</h1>
+    <h2>Answers</h2>
+    <div id="userAnswer">
+  
+    </div>
+    <img id="back_review_page" src="https://cdn-icons-png.flaticon.com/128/151/151846.png" alt="arrow">
+  </section>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+    html{
+        width:100%;
+        height:100%;
+        background-color:#f5ebe2;
+    }
+body{
+    
+    /* max-width: 550px; */
+    background-color: white;
+    /* margin: auto; */
+}
+/* user name page  */
+#uese_name_page{
+    width:100%;
+    height:100vh;
+   overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+#quiz_boy_img{
+    width:400px;
+}
+.court{
+    font-size: 1.3em;
+    padding: 0.8em;
+    text-align: center;
+}
+.userName_input_label{
+    font-size: 1.3em;
+    padding: 1em;
+}
+#enter_quiz_page{
+    font-size: 1.5em;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+    background-color:#f5ebe2;
+    margin-top: 2em;
+    border:1px solid rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.3);
+}
+#user_name_input{
+    font-size: 1.4em;
+    width:80%;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 7px;
+}
+
+
+/* question page */
+#Question_page{
+        width:100%;
+        height:0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #fff5ee;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+        /* max-width: 550px; */
+    }
+    #Question_img{
+        width:330px;
+        height:30vh;
+        border:1px solid green;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 1px 1px 15px rgba(0,0,0,0.5);
+        background-image: url("https://t4.ftcdn.net/jpg/01/68/57/59/360_F_168575997_5tXPoHdJHfo16w9maHZbbJdxCiSSXdhT.jpg");
+    }
+    #Question{
+        font-size: 1.5em;
+        padding:0.7em 0.5em;
+    }
+    .Question_count_window{
+        width:90%;
+        height:20px;
+        max-width: 380px;
+        background-color: white;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: inset 0 0 15px 1px rgb(255, 176, 39), inset 0 2px 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 1px rgba(255, 255, 255, 0.25);
+        display: flex;
+    }
+    .question_count_move{
+        width:0%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: inset 0 0 5px 3px rgb(255, 136, 0), inset 0 2px 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 1px rgba(255, 255, 255, 0.25);
+        transition: 1s;
+        height:100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .option{
+        font-size: 1.5em;
+        padding: 0.2em 0.5em;
+        width:85%;
+        box-shadow: inset 0 0 10px 0.5px rgb(208, 192, 143), inset 0 2px 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 1px rgba(255, 255, 255, 0.25);
+        margin: 0.4em;
+        border-radius: 10px;
+    }
+    #option4{
+        margin-bottom: 2em;
+    }
+    #option1{
+        margin-top: 1em;
+    }
+    .level{
+        border:0.1px solid rgba(155, 2, 150, 0.159);
+        padding:0.3em 1em;
+        border-radius: 10px;
+        font-size: 1.1em;
+        box-shadow: inset 0 0 35px 5px rgba(255, 209, 157, 0.25), inset 0 2px 1px 1px rgba(255,255,255,0.9), inset 0 -2px 1px rgba(0,0,0,0.25);
+    }
+    .level_category{
+        display: flex;
+        width:100%;
+        justify-content: center;
+        margin-right: 1px;
+        font-size: 1.5em;
+        color:rgb(0, 0, 0);
+    }
+    .question_page_button_and_time{
+        text-align: right;
+        width:80%;
+        height:40px;
+        margin-bottom: 1em;
+    }
+    #Next_Qusestion_Button{
+    font-size: 1.5em;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+    background-color: rgb(255, 229, 194);
+    border:1px solid rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+
+    }
+
+    .question_bottom_page{
+        position: relative;
+        /* min-height: 700px; */
+       width: 390px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
+      border-radius: 40px;
+    }
+   
+    #back_Quiz_page{
+        width:30px;
+        position: absolute;
+        top:2%;
+        left:1%;
+    }
+.Question_count_box{
+    /* border:1px solid rgb(0, 8, 255); */
+    font-size: 1.5em;
+    padding: 0 0.6em;
+    /* position: absolute;
+    top: 3%;
+    right: 2%; */
+}
+
+
+
+
+/* category page */
+#category_page{
+    width:100%;
+    height:0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff5ee;
+    position:absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+    /* max-width: 550px; */
+}
+.category h3{
+    width:100%;
+    text-align: center;
+}
+.user_detail_category_page{
+    display: flex;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-top: 1em;
+    width:90%;
+    justify-content: space-between;
+    font-size: 1.3em;
+    padding-bottom: 1em;
+}
+#category_page h1{
+    font-size: 1.5em;
+    margin-top: 0.3em;
+}
+#category_page img{
+    border-radius: 10px;
+}
+.category_box{
+    width:100%;
+    max-width: 500px;
+    height:30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.category{
+    width:45%;
+    height:90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+.category_box :hover{
+    transform: scale(1.05);
+}
+#start_quiz{
+    font-size: 1.5em;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+    margin-bottom: 1em;
+    background-color: rgb(255, 220, 175);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+#reuslt_stats{
+    padding: 1em;
+    font-size: 2em;
+}
+
+
+
+/* result page */
+#result_page{
+    width:100%;
+    height:0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff7f5;
+    transition: 0.2s;
+    /* z-index: 1; */
+    /* max-width: 550px; */
+}
+#result_img{
+    width:300px;
+    height:300px;
+    border-radius: 5px;
+    background-image: url("win.png");
+    background-size: cover;
+    background-position: center;
+}
+.score_box{
+    width:100%;
+    height:100%;
+    display: flex;
+    border-top:1px solid rgb(0, 0, 0);
+}
+
+.result_box{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.score_stats{
+    width:34%;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 0.7em;
+}
+.correct_ans_count{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+#play_again{
+    font-size: 1.5em;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+    background-color: rgb(255, 220, 175);
+    margin-top: 2em;
+    margin-right: 1em;
+    border:1px solid rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.3);
+    /* margin: 2 2em; */
+}
+#back_result_page{
+    width:30px;
+    position: absolute;
+    top: 2%;
+    left:2%;
+}
+#High_score_img{
+    width:40px;
+    position: absolute;
+    bottom: 3%;
+    Right :5%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgb(255, 115, 0);
+}
+#review_img{
+    width:40px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px rgb(152, 69, 0);
+    vertical-align: bottom;
+}
+.review_result_button{
+    width:100%;
+    text-align: center;
+    /* border:1px solid red; */
+}
+
+/* High score page */
+
+#High_score_page{
+    width:100%;
+    height:0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff5ee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+}
+.score_bord{
+    width:90%;
+    background-color: #ffddc5;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0.3em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    max-width: 500px;
+}
+.h_p_name{
+    width:70%;
+}
+.H_S_category_name{
+    font-size: 1.4em;
+    color: #554941;
+}
+.H_S_name{
+    font-size: 1.7em;
+}
+.proverb{
+    font-size: 1em;
+    text-align: center;
+    width:100%;
+    padding: 1em;
+}
+#back_stats_page{
+    width:30px;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+
+
+
+
+
+/* review page */
+#review_page{
+    width:100%;
+    /* min-height:100vh; */
+    height:0;
+    /* border:1px solid red; */
+    background-color: #fff5ee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    /* z-index: 3; */
+}
+#review_page h1{
+    font-size: 2em;
+}
+#userAnswer{
+    width:95%;
+    /* border-top:1px solid green; */
+    font-size: 1.2em;
+    padding: 0em 0.3em;
+    text-align: center;
+    overflow: scroll;
+    max-width: 80vh;
+    padding: 1em 0;
+    border-top: 1px solid rgb(204, 99, 2 ,10%);
+}
+.answer_review_page , .C_Answer_review_page{
+    width:95%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.3em;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    max-width: 500px;
+    margin: auto;
+    color:"red";
+}
+.C_Answer_review_page{
+    background-color: rgb(255, 231, 199);
+}
+.answer_review_Question{
+    padding-top: 1em;
+    text-align:left ;
+    margin: auto;
+    padding-bottom: 0.6em;
+    max-width: 500px;
+}
+#back_review_page{
+    width:30px;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+@media only screen and (max-height: 700px) {
+    body{
+        font-size: 0.7em;
+    }
+    #level_category{
+        font-size: 1em;
+    }
+    .question_page_button_and_time{
+        font-size: 1em;
+    }
+    #Next_Qusestion_Button{
+        font-size: 1.5em;
+    }
+    .option{
+        font-size: 1.3em;
+    }
+    .Question_count_window {
+        height:15px;
+    }
+    #back_Quiz_page{
+        width:20px;
+    }
+    #back_result_page {
+        width: 20px;
+    }
+    #user_name_input{
+        width: 40%;
+        font-size:1.3em
+    }
+    #back_stats_page {
+    width: 20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 500px) {
+    #back_review_page{
+        width:20px;
+    }
+}
+
+
+</style>
+    <script src="Quiz_Questions.js"></script>
+    <script src="QuizObject.js"></script>
+    <script src="QuizUiAndObject.js"></script>
+</body>
+</html>
